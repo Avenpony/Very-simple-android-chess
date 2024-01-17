@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wood2">
+
+    <com.example.chessapp.ChessBoardGameView
+        android:id="@+id/chessboardView"
+        android:layout_width="match_parent"
+        android:layout_height="419dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="71dp"
+        android:layout_marginBottom="241dp"
+        tools:context=".MainActivity" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/resetButton"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_above="@+id/flipButton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="25dp"
+        android:text="Reset" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/returnToMenu"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="104dp"
+        android:text="Return To Menu" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/undoButton"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_above="@+id/returnToMenu"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="25dp"
+        android:layout_toStartOf="@+id/resetButton"
+        android:text="Undo" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/flipButton"
+        android:layout_width="148dp"
+        android:layout_height="36dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="104dp"
+        android:text="Flip Board" />
+
+    <ImageView
+        android:id="@+id/turnIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="121dp"
+        android:layout_marginBottom="22dp"
+        app:srcCompat="@drawable/king_light" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="30dp"
+        android:layout_toStartOf="@+id/turnIndicator"
+        android:text="Turn:"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/blackTimerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="154dp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/whiteTimerTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="36dp"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
